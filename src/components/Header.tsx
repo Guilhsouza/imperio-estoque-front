@@ -8,56 +8,52 @@ export default function Header() {
     return (
         <>
             <Navbar container='md' style={{ backgroundColor: '#d1ae6c' }}>
-                <Nav className='flex-row align-items-center' navbar>
+                <Nav className='d-flex flex-row justify-content-between align-items-center w-100' navbar>
+
                     <Link href='/' className='navbar-brand'>
                         <Image
                             src={logo}
                             width={55}
                             height={55}
+                            style={{ borderRadius: '0.4rem' }}
                             alt='logo império sofás'
                         />
                     </Link>
 
                     <div className='d-flex'>
                         <NavItem>
-                            <Link href='/products' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
+                            <Link href='/sofas' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
                                 Sofás
                             </Link>
                         </NavItem>
 
                         <NavItem>
-                            <Link href='/cart' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
-                                Guarda-roupas
+                            <Link href='/camaEcolchao' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
+                                Camas e Colchões
                             </Link>
                         </NavItem>
 
                         <NavItem>
-                            <Link href='/cart' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
-                                Camas
+                            <Link href='' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} >
+                                Sala
                             </Link>
                         </NavItem>
 
                         <NavItem>
-                            <Link href='/cart' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
-                                Colchões
-                            </Link>
-                        </NavItem>
-
-                        <NavItem>
-                            <Link href='/cart' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
+                            <Link href='' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
                                 Cozinha
                             </Link>
                         </NavItem>
                     </div>
 
-                    <div className=''>
-                        <NavItem >
+
+                    <div>
+                        <NavItem>
                             <Link href='/cart' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
                                 Vendas
                             </Link>
                         </NavItem>
                     </div>
-
                 </Nav>
             </Navbar >
 
