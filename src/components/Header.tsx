@@ -22,7 +22,7 @@ export default function Header() {
 
                     <div className='d-flex'>
                         <NavItem>
-                            <Link href='/sofas' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
+                            <Link href='/sofas' className={`nav-link ${styles.btnStyle} ${styles.btnHoverHeader}`} passHref>
                                 Sofás
                             </Link>
                         </NavItem>
@@ -34,7 +34,7 @@ export default function Header() {
                         </NavItem>
 
                         <NavItem>
-                            <Link href='' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} >
+                            <Link href='' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
                                 Sala
                             </Link>
                         </NavItem>
@@ -46,7 +46,6 @@ export default function Header() {
                         </NavItem>
                     </div>
 
-
                     <div>
                         <NavItem>
                             <Link href='/cart' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
@@ -56,7 +55,6 @@ export default function Header() {
                     </div>
                 </Nav>
             </Navbar >
-
         </>
     )
 }

@@ -5,5 +5,5 @@
 }
 
 .btnHoverHeader:hover {
-    color: #f5f8fa;
+    color: #f5f8fa !important;
 }
