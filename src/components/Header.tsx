@@ -1,59 +1,61 @@
+import { Navbar, NavbarContent, NavbarItem, NavbarBrand } from '@nextui-org/navbar';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Nav, Navbar, NavItem } from 'reactstrap';
 import logo from '../app/favicon/icon.jpeg'
 import styles from '../styles/btnHeader.module.css'
 
 export default function Header() {
     return (
         <>
-            <Navbar container='md' style={{ backgroundColor: '#d1ae6c' }}>
-                <Nav className='d-flex flex-row justify-content-between align-items-center w-100' navbar>
+            <Navbar style={{ backgroundColor: '#d1ae6c' }}>
+                <NavbarContent className='flex-1 justify-around place-items-center p-3 w-full'>
 
-                    <Link href='/' className='navbar-brand'>
-                        <Image
-                            src={logo}
-                            width={55}
-                            height={55}
-                            style={{ borderRadius: '0.4rem' }}
-                            alt='logo império sofás'
-                        />
-                    </Link>
+                    <NavbarBrand>
+                        <Link href='/' >
+                            <Image
+                                src={logo}
+                                width={55}
+                                height={55}
+                                style={{ borderRadius: '0.4rem' }}
+                                alt='logo império sofás'
+                            />
+                        </Link>
+                    </NavbarBrand>
 
-                    <div className='d-flex'>
-                        <NavItem>
-                            <Link href='/sofas' className={`nav-link ${styles.btnStyle} ${styles.btnHoverHeader}`} passHref>
+                    <div className='flex gap-4'>
+                        <NavbarItem>
+                            <Link href='/sofas' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Sofás
                             </Link>
-                        </NavItem>
+                        </NavbarItem>
 
-                        <NavItem>
-                            <Link href='/camaEcolchao' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
+                        <NavbarItem>
+                            <Link href='/camaEcolchao' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Camas e Colchões
                             </Link>
-                        </NavItem>
+                        </NavbarItem>
 
-                        <NavItem>
-                            <Link href='' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
+                        <NavbarItem>
+                            <Link href='' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Sala
                             </Link>
-                        </NavItem>
+                        </NavbarItem>
 
-                        <NavItem>
-                            <Link href='' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
+                        <NavbarItem>
+                            <Link href='' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Cozinha
                             </Link>
-                        </NavItem>
+                        </NavbarItem>
                     </div>
 
                     <div>
-                        <NavItem>
-                            <Link href='/cart' className={`nav-link ${styles.btnHoverHeader} ${styles.btnStyle}`} passHref>
+                        <NavbarItem>
+                            <Link href='/cart' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Vendas
                             </Link>
-                        </NavItem>
+                        </NavbarItem>
                     </div>
-                </Nav>
+                </NavbarContent>
             </Navbar >
         </>
     )
