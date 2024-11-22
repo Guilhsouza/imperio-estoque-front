@@ -11,16 +11,16 @@ interface genericCardSofasProps {
 const GenericCardSofas: React.FC<genericCardSofasProps> = ({ title, cardImage, altImage }) => {
     return (
         <Link href={""}>
-            <Card className="p-4">
-                <CardHeader>
-                    <title>{title}</title>
+            <Card className="bg-neutral-800 rounded-lg mt-8">
+                <CardHeader className="pb-0 flex-col items-center">
+                    <h3>{title}</h3>
                 </CardHeader>
 
                 <CardBody >
                     <Image
                         src={cardImage}
                         alt={altImage}
-                        className="object-cover w-72"
+                        className="object-cover rounded-lg"
                     />
                 </CardBody>
             </Card>
