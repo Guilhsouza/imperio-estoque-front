@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import styles from "../styles/editBtnHover.module.css"
 
 interface genericCardSofasProps {
     title: string,
@@ -9,7 +9,7 @@ interface genericCardSofasProps {
 }
 
 const SpecifiedSofaCard: React.FC<genericCardSofasProps> = ({ title, cardImage, altImage }) => {
-    const stockResult = 10
+    const stockResult = 99
 
     return (
         <Card shadow="sm" className="bg-neutral-800 rounded-lg mt-8">
@@ -26,7 +26,10 @@ const SpecifiedSofaCard: React.FC<genericCardSofasProps> = ({ title, cardImage, 
             </CardBody>
 
             <CardFooter>
-                <p>Quantidade no Estoque: {stockResult}</p>
+                <div className="flex justify-around w-full">
+                    <p>Quantidade no Estoque: {stockResult}</p>
+                    <button className={`border-solid border-2 rounded-full px-4 ${styles.btnHoverDefaultColor} ${styles.btnHover}`}>editar</button>
+                </div>
             </CardFooter>
         </Card>
     );
