@@ -30,7 +30,7 @@ export default function Header() {
                         </NavbarItem>
 
                         <NavbarItem>
-                            <Link href='/camaEcolchao' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
+                            <Link href='/bedsAndMattress' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Camas e Colchões
                             </Link>
                         </NavbarItem>
