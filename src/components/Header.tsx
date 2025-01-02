@@ -7,7 +7,7 @@ import styles from '../styles/btnHeader.module.css'
 export default function Header() {
     return (
         <>
-            <Navbar style={{ backgroundColor: '#d1ae6c' }}>
+            <Navbar className='bg-standardGreen'>
                 <NavbarContent className='flex-1 justify-around place-items-center p-3 w-full'>
 
                     <NavbarBrand>
