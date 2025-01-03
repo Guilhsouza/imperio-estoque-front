@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { roboto } from "../fonts/fonts";
-import SpecifiedSofaCard from "@/components/SpecifiedSofaCard";
+import SpecifiedSofaCard from "@/components/sofaPageComponents/SpecifiedSofaCard";
 import camaGeneric from "@/images/cama-generic.jpg"
 
 export const metadata: Metadata = {
