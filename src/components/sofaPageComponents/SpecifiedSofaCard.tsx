@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import Image, { StaticImageData } from "next/image";
 import styles from "../styles/editBtnHover.module.css"
+import stylesFromImg from '@/styles/standardizeSizeImg.module.css'
 
 interface genericCardSofasProps {
     title: string,
@@ -18,11 +19,15 @@ const SpecifiedSofaCard: React.FC<genericCardSofasProps> = ({ title, cardImage, 
             </CardHeader>
 
             <CardBody>
-                <Image
-                    src={cardImage}
-                    alt={altImage}
-                    className="object-cover rounded-lg cursor-pointer"
-                />
+                <div className={`${stylesFromImg.standardizeSizeImg}`}>
+                    <Image
+                        src={cardImage}
+                        alt={altImage}
+                        fill
+                        objectFit="cover"
+                        className="rounded-lg cursor-pointer"
+                    />
+                </div>
             </CardBody>
 
             <CardFooter>
@@ -31,7 +36,7 @@ const SpecifiedSofaCard: React.FC<genericCardSofasProps> = ({ title, cardImage, 
                     <button className={`border-solid border-2 rounded-full px-4 ${styles.btnHoverDefaultColor} ${styles.btnHover}`}>editar</button>
                 </div>
             </CardFooter>
-        </Card>
+        </Card >
     );
 }
 
