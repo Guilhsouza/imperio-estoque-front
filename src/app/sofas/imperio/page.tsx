@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
-import GenericPageForSofaModels from '../../../components/GenericPageForSofaModels'
-import SpecifiedSofaCard from "../../../components/SpecifiedSofaCard";
-import sofaEspecified from "../../../images/sofa-especified.jpg"
+import GenericPageForSofaModels from '@/components/sofaPageComponents/GenericPageForSofaModels'
+import SpecifiedSofaCard from "@/components/sofaPageComponents/SpecifiedSofaCard";
+import sofaEspecified from "@/images/sofa-especified.jpg"
+import sofa2 from "@/images/cama-generic.jpg"
+import sofa3 from "@/images/sofa-background.png"
 
 export const metadata: Metadata = {
     title: 'Sofás | Império Sofás'
@@ -21,10 +23,9 @@ export default function imperioPage() {
 
             sofaCards={[
                 <>
-                    <SpecifiedSofaCard title='sofa X 2.10' altImage='foto do sofa' cardImage={sofaEspecified} />
-                    <SpecifiedSofaCard title='sofa X 2.10' altImage='foto do sofa' cardImage={sofaEspecified} />
-                    <SpecifiedSofaCard title='sofa X 2.10' altImage='foto do sofa' cardImage={sofaEspecified} />
-                    <SpecifiedSofaCard title='sofa X 2.10' altImage='foto do sofa' cardImage={sofaEspecified} />
+                    <SpecifiedSofaCard title='sofa Z 2.10' altImage='foto do sofa' cardImage={sofaEspecified} />
+                    <SpecifiedSofaCard title='sofa Z 2.10' altImage='foto do sofa' cardImage={sofa2} />
+                    <SpecifiedSofaCard title='sofa Z 2.10' altImage='foto do sofa' cardImage={sofa3} />
                 </>
             ]}
         />
