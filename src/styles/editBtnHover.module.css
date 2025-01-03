@@ -1,0 +1,10 @@
+.btnHoverDefaultColor {
+    border-color: #36454f;
+    transition: .3s;
+}
+
+.btnHover:hover {
+    border-color: #f5f8fa;
+    transition: .3s;
+    ;
+}

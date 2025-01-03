@@ -1,0 +1,9 @@
+.btnDefaultColor {
+    color: #36454f;
+    transition: .5s;
+}
+
+.btnHoverHeader:hover {
+    color: #f5f8fa;
+    transition: .5s;
+}
