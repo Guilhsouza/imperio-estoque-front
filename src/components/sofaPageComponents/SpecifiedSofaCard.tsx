@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import Image, { StaticImageData } from "next/image";
-import styles from "../styles/editBtnHover.module.css"
+import styles from "@/styles/editBtnHover.module.css"
 import stylesFromImg from '@/styles/standardizeSizeImg.module.css'
 
 interface genericCardSofasProps {
