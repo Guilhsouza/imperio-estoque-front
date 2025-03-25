@@ -24,6 +24,12 @@ export default function Header() {
 
                     <div className='flex gap-4'>
                         <NavbarItem>
+                            <Link href='/' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
+                                Início
+                            </Link>
+                        </NavbarItem>
+
+                        <NavbarItem>
                             <Link href='/sofas' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Sofás
                             </Link>
