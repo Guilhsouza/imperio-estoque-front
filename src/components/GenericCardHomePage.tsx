@@ -1,27 +1,30 @@
 interface genericCardProps {
+    textFooter: string,
     backgroundImage: string | StaticImageData,
     alt: string,
-    href: string
+    href: string,
 }
 
-import { Card, CardHeader } from "@nextui-org/card"
+import { Card, CardBody, CardFooter } from "@nextui-org/card"
 import Image, { StaticImageData } from "next/image"
 import Link from "next/link";
 import React from "react";
 
-const GenericCard: React.FC<genericCardProps> = ({ backgroundImage, alt, href }) => {
+const GenericCard: React.FC<genericCardProps> = ({ textFooter, backgroundImage, alt, href }) => {
     return (
         <Link href={href}>
-            <Card >
-                <CardHeader className="absolute">
-                    <p>Card genérico</p>
-                </CardHeader>
+            <Card className="bg-neutral-800 rounded-lg w-full">
+                <CardBody className="p-0 w-full">
+                    <Image
+                        src={backgroundImage}
+                        alt={alt}
+                        className="bg-cover w-full h-full rounded-lg"
+                    />
+                </CardBody>
 
-                <Image
-                    src={backgroundImage}
-                    alt={alt}
-                    className="bg-cover w-full h-full rounded-lg"
-                />
+                <CardFooter className="flex justify-center text-xl w-full">
+                    <p>{textFooter}</p>
+                </CardFooter>
             </Card>
         </Link>
     );

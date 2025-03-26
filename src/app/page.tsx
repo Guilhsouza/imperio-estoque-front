@@ -5,13 +5,13 @@ import sofaImage from "../images/sofa-background.png"
 export default function Home() {
   return (
     <>
-      <main>
-        <h2 className={`text-center mt-9 mb-5 text-3xl ${roboto.className}`}> Estoque Império Sofás</h2>
-        <div className="w-full max-w-2xl max-h-72 grid grid-cols-2 justify-self-center gap-4">
-          <GenericCardHomePage alt="Imagem do Sofá" href="/sofas" backgroundImage={sofaImage} />
-          <GenericCardHomePage alt="Imagem do Sofá" href="/sofas" backgroundImage={sofaImage} />
-          <GenericCardHomePage alt="Imagem do Sofá" href="/sofas" backgroundImage={sofaImage} />
-          <GenericCardHomePage alt="Imagem do Sofá" href="/sofas" backgroundImage={sofaImage} />
+      <main className="h-full overflow-hidden w-full">
+        <h2 className={`text-center my-10 text-3xl ${roboto.className}`}> Estoque Império Sofás</h2>
+        <div className="max-w-5xl grid grid-cols-2 justify-self-center gap-x-6 gap-y-12 w-full  h-full">
+          <GenericCardHomePage textFooter="Sofás" alt="Imagem do Sofá" href="/sofas" backgroundImage={sofaImage} />
+          <GenericCardHomePage textFooter="Camas e Colchões" alt="Imagem do Sofá" href="/sofas" backgroundImage={sofaImage} />
+          <GenericCardHomePage textFooter="Sala" alt="Imagem do Sofá" href="/sofas" backgroundImage={sofaImage} />
+          <GenericCardHomePage textFooter="Cozinha" alt="Imagem do Sofá" href="/sofas" backgroundImage={sofaImage} />
         </div>
       </main >
     </>
