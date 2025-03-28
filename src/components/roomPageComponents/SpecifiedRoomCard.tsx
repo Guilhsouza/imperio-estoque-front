@@ -3,14 +3,14 @@ import Image, { StaticImageData } from "next/image";
 import styles from "@/styles/editBtnHover.module.css"
 import stylesFromImg from '@/styles/standardizeSizeImg.module.css'
 
-interface genericCardSofasProps {
-    title: string,
-    cardImage: string | StaticImageData,
+interface typesForBedsCard {
+    title: string;
+    cardImage: string | StaticImageData
     altImage: string
 }
 
-const SpecifiedSofaCard: React.FC<genericCardSofasProps> = ({ title, cardImage, altImage }) => {
-    const stockResult = 99
+const SpecifiedBedsCard: React.FC<typesForBedsCard> = ({ title, cardImage, altImage }) => {
+    const stockResult = 10
 
     return (
         <Card shadow="sm" className="bg-neutral-800 rounded-lg mt-8">
@@ -24,8 +24,7 @@ const SpecifiedSofaCard: React.FC<genericCardSofasProps> = ({ title, cardImage, 
                         src={cardImage}
                         alt={altImage}
                         fill
-                        objectFit="cover"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg object-cover"
                     />
                 </div>
             </CardBody>
@@ -37,7 +36,7 @@ const SpecifiedSofaCard: React.FC<genericCardSofasProps> = ({ title, cardImage, 
                 </div>
             </CardFooter>
         </Card >
-    );
+    )
 }
 
-export default SpecifiedSofaCard
+export default SpecifiedBedsCard

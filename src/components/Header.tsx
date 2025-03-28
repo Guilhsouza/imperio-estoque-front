@@ -24,6 +24,12 @@ export default function Header() {
 
                     <div className='flex gap-4'>
                         <NavbarItem>
+                            <Link href='/' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
+                                Início
+                            </Link>
+                        </NavbarItem>
+
+                        <NavbarItem>
                             <Link href='/sofas' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Sofás
                             </Link>
@@ -36,13 +42,13 @@ export default function Header() {
                         </NavbarItem>
 
                         <NavbarItem>
-                            <Link href='' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
+                            <Link href='/room' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Sala
                             </Link>
                         </NavbarItem>
 
                         <NavbarItem>
-                            <Link href='' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
+                            <Link href='/kitchen' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Cozinha
                             </Link>
                         </NavbarItem>
