@@ -39,7 +39,7 @@ export default function bedsAndMattress() {
             <div id="mattress" ref={mattressElement}>
                 <h3 className="underline text-4xl ms-16">Colchões</h3>
 
-                <div className="w-full grid grid-cols-4 justify-self-center gap-6 px-16">
+                <div className="w-full grid grid-cols-4 justify-self-center gap-6 px-16 mb-9">
                     <SpecifiedBedsCard altImage="cama padrao" title="Cama yxz" cardImage={camaGeneric} />
                     <SpecifiedBedsCard altImage="cama padrao" title="Cama yxz" cardImage={camaGeneric} />
                     <SpecifiedBedsCard altImage="cama padrao" title="Cama yxz" cardImage={camaGeneric} />
