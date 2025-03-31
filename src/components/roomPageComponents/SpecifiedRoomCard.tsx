@@ -9,7 +9,7 @@ interface typesForBedsCard {
     altImage: string
 }
 
-const SpecifiedBedsCard: React.FC<typesForBedsCard> = ({ title, cardImage, altImage }) => {
+const SpecifiedRoomCard: React.FC<typesForBedsCard> = ({ title, cardImage, altImage }) => {
     const stockResult = 10
 
     return (
@@ -39,4 +39,4 @@ const SpecifiedBedsCard: React.FC<typesForBedsCard> = ({ title, cardImage, altIm
     )
 }
 
-export default SpecifiedBedsCard
+export default SpecifiedRoomCard
