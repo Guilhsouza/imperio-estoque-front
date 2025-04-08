@@ -20,7 +20,7 @@ export default function bedsAndMattress() {
 
             <div className="flex justify-center">
                 <button
-                    className="rounded-full mt-5 p-2 bg-standardGreen text-standardBlack"
+                    className="rounded-full mt-5 px-5 py-2 bg-standardGreen text-standardBlack"
                     onClick={scrollToMattressSection}>
                     Quer pular para os colchões? Clique Aqui!
                 </button>
@@ -38,7 +38,6 @@ export default function bedsAndMattress() {
             <hr className="mx-16 my-12" />
             <div id="mattress" ref={mattressElement}>
                 <h3 className="underline text-4xl ms-16">Colchões</h3>
-
                 <div className="w-full grid grid-cols-4 justify-self-center gap-6 px-16 mb-9">
                     <SpecifiedBedsCard altImage="cama padrao" title="Cama yxz" cardImage={camaGeneric} />
                     <SpecifiedBedsCard altImage="cama padrao" title="Cama yxz" cardImage={camaGeneric} />
