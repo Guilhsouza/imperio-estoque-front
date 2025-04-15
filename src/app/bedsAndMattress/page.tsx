@@ -4,7 +4,7 @@ import SpecifiedBedsCard from "@/components/bedsPageComponents/SpecifiedBedsCard
 import camaGeneric from "@/images/cama-generic.jpg"
 import { useRef } from "react";
 
-export default function bedsAndMattress() {
+export default function BedsAndMattress() {
     const mattressElement = useRef<HTMLDivElement | null>(null)
 
     const scrollToMattressSection = () => {
