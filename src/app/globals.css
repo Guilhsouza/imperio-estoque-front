@@ -16,3 +16,7 @@ body {
   background-color: #141010;
   overflow-x: hidden
 }
+
+option {
+  color: #000
+}
