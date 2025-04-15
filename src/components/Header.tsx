@@ -56,7 +56,7 @@ export default function Header() {
 
                     <div>
                         <NavbarItem>
-                            <Link href='/cart' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
+                            <Link href='/vendas' className={`${styles.btnDefaultColor} ${styles.btnHoverHeader}`} passHref>
                                 Vendas
                             </Link>
                         </NavbarItem>

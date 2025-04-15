@@ -9,8 +9,8 @@ interface typesForBedsCard {
     altImage: string
 }
 
-const SpecifiedRoomCard: React.FC<typesForBedsCard> = ({ title, cardImage, altImage }) => {
-    const stockResult = 10
+const SpecifiedKitchenCard: React.FC<typesForBedsCard> = ({ title, cardImage, altImage }) => {
+    const stockResult = 55
 
     return (
         <Card shadow="sm" className="bg-neutral-800 rounded-lg mt-8">
@@ -18,13 +18,13 @@ const SpecifiedRoomCard: React.FC<typesForBedsCard> = ({ title, cardImage, altIm
                 <h3>{title}</h3>
             </CardHeader>
 
-            <CardBody>
-                <div className={`${stylesFromImg.standardizeSizeImg}`}>
+            <CardBody className="h-[400px]">
+                <div className={`${stylesFromImg.standardizeSizeImg} h-full`}>
                     <Image
                         src={cardImage}
                         alt={altImage}
                         fill
-                        className="rounded-lg object-cover"
+                        className="rounded-lg object-fill"
                     />
                 </div>
             </CardBody>
@@ -39,4 +39,4 @@ const SpecifiedRoomCard: React.FC<typesForBedsCard> = ({ title, cardImage, altIm
     )
 }
 
-export default SpecifiedRoomCard
+export default SpecifiedKitchenCard

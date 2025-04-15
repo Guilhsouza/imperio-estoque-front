@@ -25,7 +25,7 @@ const SpecifiedSofaCard: React.FC<genericCardSofasProps> = ({ title, cardImage, 
                         alt={altImage}
                         fill
                         objectFit="cover"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg"
                     />
                 </div>
             </CardBody>
