@@ -1,30 +1,33 @@
 'use client'
 import ProductForm from "@/components/sellingsComponents/ProductForm"
-import { act, useEffect, useState } from "react"
+import { useState } from "react"
 
 const VendasPage = () => {
     const [useActualProducts, setActualProducts] = useState([0])
 
     const addAnotherForm = () => {
-        setActualProducts(actualArrayProducts => [...actualArrayProducts, actualArrayProducts.length])
+        const lastId = useActualProducts[useActualProducts.length - 1] ?? 0;
+        const newId = lastId + 1;
+
+        setActualProducts([...useActualProducts, newId]);
     }
 
-    const deleteForm = () => {
-        setActualProducts(actualArrayProducts => [])
+    const deleteForm = (idToRemove: number) => {
+        setActualProducts(actualArrayProducts => actualArrayProducts.filter(id => id !== idToRemove))
     }
 
-    useEffect(() => {
-        console.log(useActualProducts);
-
-    })
     return (
         <>
             <title>Painel de Vendas | Império Sofás</title>
             <h2 className="mt-9 text-3xl text-center">Painel de Vendas</h2>
 
+            <div className="flex w-full justify-center mt-12 gap-4">
+                <button className="border-b-2">Criar Vendas</button>
+                <button className="hover:border-b-2">Verificar Vendas</button>
+            </div>
             <div id="products">
                 {useActualProducts.map(id => (
-                    <ProductForm addForm={addAnotherForm} deleteForm={deleteForm} key={id} />
+                    <ProductForm addForm={addAnotherForm} deleteForm={() => deleteForm(id)} key={id} />
                 ))}
             </div>
 
